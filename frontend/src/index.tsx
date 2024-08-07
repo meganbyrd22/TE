@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { ChakraProvider } from '@chakra-ui/react';
+import ReactDOM from 'react-dom/client'; // Note the correct import here
+import { ChakraBaseProvider } from './chakra-provider';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import './index.css';
 import App from './App';
@@ -11,16 +11,16 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
-    <ChakraProvider>
-      <App />
-    </ChakraProvider>
+      <ChakraBaseProvider>
+        <App />
+      </ChakraBaseProvider>
     </ApolloProvider>
   </React.StrictMode>
 );

@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "types": ["node", "react", "react-dom", "@testing-library/react"],
-    "target": "es6",
+    "types": ["node", "react", "react-dom", "@testing-library/react",  "jest"],
+    "target": "esnext",
     "lib": ["dom", "esnext"],
     "jsx": "react-jsx",
-    "module": "esnext",
-    "moduleResolution": "node",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "isolatedModules": true,
     "strict": true,
     "esModuleInterop": true,

@@ -2,6 +2,7 @@ import React from 'react';
 //import {  ApolloProvider, useQuery, gql } from '@apollo/client';
 //import logo from './logo.svg';
 import './App.css';
+import { ChakraBaseProvider } from './chakra-provider';
 
 // Define GraphQL query
 /*const MESSAGE_QUERY = gql`
@@ -11,6 +12,8 @@ import './App.css';
 `; */
 
 function App() {
+
+
   // Use useQuery hook to fetch data
   //const { loading, error, data } = useQuery(MESSAGE_QUERY); --> Remove comment to use GraphQL
   
@@ -19,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      <ChakraBaseProvider>
       <header className="App-header">
         {/* Display the message fetched from the GraphQL query */}
         {/*<h1>{data.message}</h1> --> Remove comment to use GraphQL*/}
@@ -34,6 +38,7 @@ function App() {
           Learn React
         </a>
       </header>
+      </ChakraBaseProvider>
     </div>
   );
 }
