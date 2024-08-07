@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ChakraProvider, extendTheme } from '@chakra-ui';
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 interface ChakraBaseProviderProps {
   children: ReactNode;
